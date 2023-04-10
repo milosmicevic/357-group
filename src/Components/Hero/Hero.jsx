@@ -42,9 +42,9 @@ const Hero = () => {
           <svg width="100%" height="100%" viewBox="0 0 1100 1100">
             <defs>
               <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="18%" stopColor="hsla(132, 71%, 47%, 1)" />
-                <stop offset="38%" stopColor="hsla(152, 86%, 77%, 1)" />
-                <stop offset="70%" stopColor="hsla(224, 100%, 55%, 1)" />
+                <stop offset="0%" stopColor="hsla(224, 100%, 55%, 1)" />
+                <stop offset="10%" stopColor="hsla(152, 86%, 77%, 1)" />
+                <stop offset="60%" stopColor="hsla(132, 71%, 47%, 1)" />
               </linearGradient>
             </defs>
             <path />
