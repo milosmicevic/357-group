@@ -2,7 +2,6 @@
   position: fixed;
   bottom: 15px;
   right: 15px;
-  //   width: 100%;
   z-index: 100;
 }
 
@@ -11,6 +10,16 @@
   cursor: pointer;
   position: relative;
   z-index: 10;
+  .poly-icon {
+    transform: rotate(0);
+    transition: all 0.3s ease-in;
+  }
+
+  &.visible {
+    .poly-icon {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .element-one,
@@ -18,18 +27,21 @@
   position: absolute;
   padding: 10px;
   opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.element-one {
-  top: -60px;
-  right: 65px;
-}
-.element-two {
-  top: 24px;
-  right: 111px;
+  transition: all 0.3s ease-in;
+  top: 15px;
+  right: 15px;
 }
 
 .visible {
   opacity: 1;
+}
+
+.element-one.visible {
+  top: -60px;
+  right: 65px;
+}
+
+.element-two.visible {
+  top: 24px;
+  right: 111px;
 }
