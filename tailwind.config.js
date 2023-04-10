@@ -3,12 +3,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#c19d60",
-        gray: {
-          "system-1": "#292929",
-          "system-2": "#ffffff14",
-          "system-3": "#212121",
-        },
+        primary: "#011638",
+        secondary: "#eec643",
+        dark: "#141414",
+        light: "#efefef",
       },
       fontFamily: {
         playfairDisplay: ["Playfair Display", "serif"],

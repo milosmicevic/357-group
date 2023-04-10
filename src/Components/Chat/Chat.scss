@@ -1,0 +1,35 @@
+.bottom-bar {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  //   width: 100%;
+  z-index: 100;
+}
+
+.fixed-element {
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.element-one,
+.element-two {
+  position: absolute;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.element-one {
+  top: -60px;
+  right: 65px;
+}
+.element-two {
+  top: 24px;
+  right: 111px;
+}
+
+.visible {
+  opacity: 1;
+}
