@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import "./Navigation.scss";
 import Logo from "../../assets/logo.png";
 
@@ -11,7 +10,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-dark">
+    <nav className="relative z-20 bg-dark xl:z-0">
       <div className="container navigation-wrapper">
         <div className="logo">
           <a href="#">

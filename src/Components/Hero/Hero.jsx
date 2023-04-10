@@ -29,28 +29,36 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative">
-      <div className="container flex flex-col justify-center h-full">
-        <div className="md:w-1/2">
+      <div className="container">
+        <div className="md:w-1/2 hero-content">
           <h1 className="font-normal leading-[60px] mb-20">Over 20 years of experience in management consulting</h1>
-          <div className="flex flex-col w-max gap-3 text-2xl lg:text-3xl">
-            <input type="text" className="placeholder:text-center rounded-md py-1" placeholder="email@company.com" />
-            <button className="bg-secondary text-white rounded-md py-1">Join Our Network</button>
+          <div className="flex flex-col gap-3 text-2xl w-max lg:text-3xl">
+            <input type="text" className="py-1 rounded-md placeholder:text-center" placeholder="email@company.com" />
+            <button className="py-1 text-white rounded-md bg-secondary">Join Our Network</button>
           </div>
         </div>
 
         <div className="slider">
-          <div className="circle">
-            {images.map((image, index) => (
-              <div key={index} className={`slide-container ${index === activeIndex ? "active" : ""}`} onClick={() => handleClick(index)}>
-                <h1>{image.title}</h1>
-                <img src={image.src} alt={`Slide ${index}`} />
-              </div>
-            ))}
-            <div className="pagination">
-              {images.map((image, index) => (
-                <div key={index} className={index === activeIndex ? "active" : ""} onClick={() => handleClick(index)} />
-              ))}
+          <svg width="100%" height="100%" viewBox="0 0 1100 1100">
+            <defs>
+              <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="18%" stopColor="hsla(132, 71%, 47%, 1)" />
+                <stop offset="38%" stopColor="hsla(152, 86%, 77%, 1)" />
+                <stop offset="70%" stopColor="hsla(224, 100%, 55%, 1)" />
+              </linearGradient>
+            </defs>
+            <path />
+          </svg>
+          {images.map((image, index) => (
+            <div key={index} className={`slide-container ${index === activeIndex ? "active" : ""}`} onClick={() => handleClick(index)}>
+              <h1>{image.title}</h1>
+              <img src={image.src} alt={`Slide ${index}`} />
             </div>
+          ))}
+          <div className="pagination">
+            {images.map((image, index) => (
+              <div key={index} className={index === activeIndex ? "active" : ""} onClick={() => handleClick(index)} />
+            ))}
           </div>
         </div>
       </div>
