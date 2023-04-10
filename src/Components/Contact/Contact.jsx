@@ -61,7 +61,7 @@ const Contact = () => {
                 <label className="pt-1 w-40 text-right text-[#5a5151]" htmlFor="message">
                   MESSAGE
                 </label>
-                <textarea id="message" className="w-full h-44 py-1 border border-[#c6c6c6] pl-2 rounded-md" placeholder="message" />
+                <textarea id="message" className="w-full h-44 py-1 border border-[#c6c6c6] pl-2 rounded-md" placeholder="Message" />
               </div>
               <div className="pl-36">
                 <button className="bg-primary text-white rounded-md py-1 w-3/5 text-2xl">Submit</button>
