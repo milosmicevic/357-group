@@ -20,13 +20,14 @@ const Chat = () => {
         className={`relative flex items-center justify-center w-32 h-32 fixed-element ${isLinksVisible ? "visible" : ""}`}
         onClick={toggleElements}
       >
-        <img className="absolute w-28 poly-icon" src={PolygonIcon} alt="" />
-        <img className="absolute w-16" src={ChatIcon} alt="" />
+        <img className="absolute w-28 poly-icon" src={PolygonIcon} alt="polygon-icon" />
+        <img className="absolute w-16" src={ChatIcon} alt="chat-icon" />
       </div>
 
       <a href="">
         <img
           src={TelegramIcon}
+          alt="telegram-icon"
           className={`element-one w-32 ${isLinksVisible ? "visible" : ""}`}
           onAnimationEnd={() => setIsLinksVisible(!isLinksVisible)}
         />
@@ -35,6 +36,7 @@ const Chat = () => {
       <a href="">
         <img
           src={WhatsappIcon}
+          alt="whatsapp-icon"
           className={`element-two w-[104px] ${isLinksVisible ? "visible" : ""}`}
           onAnimationEnd={() => setIsLinksVisible(!isLinksVisible)}
         />

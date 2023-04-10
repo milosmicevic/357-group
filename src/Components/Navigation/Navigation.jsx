@@ -13,14 +13,18 @@ const Navigation = () => {
     <nav className="relative z-20 bg-dark xl:z-0">
       <div className="container navigation-wrapper">
         <div className="logo">
-          <a href="#">
+          <a href="#" aria-label="logo">
             <img className="logo-image" src={Logo} alt="logo" />
           </a>
         </div>
         <div className={`nav-links font-semibold ${isOpen ? "open" : ""}`}>
-          <a href="#">SERVICES</a>
-          <a href="#">NETWORK</a>
-          <a href="#contact" className="text-secondary">
+          <a href="#" aria-label="services">
+            SERVICES
+          </a>
+          <a href="#" aria-label="network">
+            NETWORK
+          </a>
+          <a href="#contact" aria-label="contact" className="text-secondary">
             CONTACT
           </a>
         </div>
