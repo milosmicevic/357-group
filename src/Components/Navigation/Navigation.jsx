@@ -18,13 +18,13 @@ const Navigation = () => {
           </a>
         </div>
         <div className={`nav-links font-semibold ${isOpen ? "open" : ""}`}>
-          <a href="/services" aria-label="services">
+          <a href="/services" aria-label="services" onClick={() => setIsOpen(false)}>
             SERVICES
           </a>
-          <a href="#" aria-label="network">
+          <a href="#" aria-label="network" onClick={() => setIsOpen(false)}>
             NETWORK
           </a>
-          <a href="/#contact" aria-label="contact" className="text-secondary">
+          <a href="/#contact" aria-label="contact" className="text-secondary" onClick={() => setIsOpen(false)}>
             CONTACT
           </a>
         </div>
