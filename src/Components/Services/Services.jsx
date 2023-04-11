@@ -36,7 +36,7 @@ const Services = () => {
                 <p className="mb-0">{service.title1}</p>
                 {service.title2 ? <p className="mb-0">{service.title2}</p> : ""}
               </div>
-              <div className="bg-primary py-2.5 px-5 rounded-lg -mr-[2px]">
+              <div className="bg-primary py-2.5 px-5 rounded-lg -mr-[2px] flex justify-center items-center">
                 <img className="w-20" src={service.src} alt="" />
               </div>
             </div>
