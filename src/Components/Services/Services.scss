@@ -1,0 +1,108 @@
+#services {
+  @apply bg-[#d8d8d8];
+  .services-content {
+    @media (max-width: 768px) {
+      padding-top: 290px;
+      padding-bottom: 60px;
+    }
+    @media (max-width: 640px) {
+      padding-top: 350px;
+    }
+  }
+  .slider {
+    --dash-array: 3100;
+    --path: path(
+      "M1044.147 563.894Q1067.508 646.933 1017.155 716.973L852.837 945.522Q802.485 1015.557 716.33 1019.857L435.197 1033.892Q349.041 1038.191 291.961 973.512L105.71 762.458Q48.629 697.784 63.608 612.829L112.487 335.625Q127.467 250.671 203.226 209.42L450.428 74.796Q526.188 33.54 605.678 67.047L865.056 176.389Q944.545 209.896 967.907 292.929Z"
+    );
+    animation: fadeIn 1s ease-in forwards;
+    @apply absolute flex justify-center items-center;
+    // transform: scale(1.15);
+    top: -240px;
+    right: -240px;
+    width: 1100px;
+    height: 1100px;
+    clip-path: var(--path);
+    @media (max-width: 1536px) {
+      transform: scale(0.8);
+      top: -340px;
+      right: -340px;
+    }
+    @media (max-width: 1024px) {
+      transform: scale(0.6);
+      top: -390px;
+      right: -390px;
+    }
+    @media (max-width: 768px) {
+      transform: scale(0.5);
+      top: -450px;
+      right: -400px;
+    }
+    svg {
+      z-index: 10;
+
+      path {
+        stroke-dasharray: var(--dash-array);
+        stroke-dashoffset: 0;
+        animation: drawLine 3s ease-in-out;
+        d: var(--path);
+        fill: none;
+        stroke-width: 10;
+        stroke: url(#mainGradient);
+      }
+    }
+
+    .slide-container {
+      @apply flex justify-center items-center absolute top-1/2 left-1/2 w-full h-full opacity-0 transition-all duration-500 ease-in-out;
+      transform: translate(-50%, -50%);
+
+      &.active {
+        @apply opacity-100;
+      }
+
+      h1 {
+        @apply absolute z-10 text-white font-normal;
+        letter-spacing: 20px;
+        text-shadow: 2px 2px 4px #000000;
+
+        @media (max-width: 1024px) {
+          font-size: 4.5rem;
+        }
+      }
+
+      img {
+        @apply block w-full h-full object-cover grayscale;
+      }
+    }
+
+    .pagination {
+      @apply absolute z-10 bottom-[20%] flex justify-center items-center w-full;
+
+      div {
+        @apply w-2.5 h-2.5 rounded-full bg-white cursor-pointer mx-1.5;
+        @media (max-width: 1024px) {
+          width: 20px;
+          height: 20px;
+        }
+        box-shadow: 2px 2px 4px rgb(0 0 0);
+
+        &.active {
+          background-color: #333;
+        }
+      }
+    }
+  }
+}
+
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: var(--dash-array);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
