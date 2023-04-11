@@ -43,7 +43,7 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="slider">
+        <div className="heptagon">
           <svg width="100%" height="100%" viewBox="0 0 1100 1100">
             <defs>
               <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -55,7 +55,7 @@ const Services = () => {
             <path />
           </svg>
 
-          <div className={`slide-container active`}>
+          <div className={`heptagon-container active`}>
             <h1>SERVICES</h1>
             <img src={RealEstateImage} alt={`Services Image`} />
           </div>
