@@ -8,17 +8,19 @@ import axios from "axios";
 // const RECAPTCHA_API_KEY = "6Lc1KXklAAAAAHIWQFV__UbNXvIFytcLfsEIK_W0";
 const RECAPTCHA_API_KEY = "6LdP54ElAAAAAFWJ-v9FMQ09E9rRMX2Vt_hblsKw";
 
+const DEFAULT_FORM_DATA = {
+  name: "",
+  email: "",
+  company: "",
+  title: "",
+  subject: "",
+  message: "",
+};
+
 const Contact = () => {
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 
-  const [formData, setFormData] = useReducer((old, update) => ({ ...old, ...update }), {
-    name: "",
-    email: "",
-    company: "",
-    title: "",
-    subject: "",
-    message: "",
-  });
+  const [formData, setFormData] = useReducer((old, update) => ({ ...old, ...update }), DEFAULT_FORM_DATA);
 
   // const [formData, setFormData] = useState({
   //   name: "",
@@ -42,6 +44,7 @@ const Contact = () => {
         "Content-Type": "application/json",
       },
     });
+    setFormData(DEFAULT_FORM_DATA);
   };
 
   const handleInputChange = (event) => {
