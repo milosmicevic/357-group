@@ -3,10 +3,7 @@ import "./Contact.scss";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 
-//TODO PROVERITI DA LI LIK KORISTI RECAPTCHA V2 ILI V3 AKO KORISTI V3 ISPRAVITI LOGIKU AKO KORISTI V2 DODATI LOCALHOST
-
 const RECAPTCHA_API_KEY = "6Lc1KXklAAAAAHIWQFV__UbNXvIFytcLfsEIK_W0";
-// const RECAPTCHA_API_KEY = "6LdP54ElAAAAAFWJ-v9FMQ09E9rRMX2Vt_hblsKw";
 
 const DEFAULT_FORM_DATA = {
   name: "",
