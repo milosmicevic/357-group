@@ -52,7 +52,7 @@ const Hero = () => {
           {images.map((image, index) => (
             <div key={index} className={`slide-container ${index === activeIndex ? "active" : ""}`} onClick={() => handleClick(index)}>
               <h1>{image.title}</h1>
-              <img src={image.src} alt={`Slide ${index}`} lazy />
+              <img src={image.src} alt={`Slide ${index}`} loading="lazy" />
             </div>
           ))}
           <div className="pagination">
