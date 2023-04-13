@@ -19,6 +19,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+
   // const [formData, setFormData] = useState({
   //   name: "",
   //   email: "",
@@ -31,6 +32,7 @@ const Contact = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log("formData", formData);
+    console.log("🚀 ~ file: Contact.jsx:35 ~ handleFormSubmit ~ formData:", formData);
 
     await axios({
       method: "post",
