@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navigation.scss";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo.gif";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

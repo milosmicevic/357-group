@@ -3,7 +3,7 @@ import "./Contact.scss";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 
-const RECAPTCHA_API_KEY = "6Ld-h4glAAAAAKSg3Rn_2nLuJtgfd_AofLxgRemf";
+const RECAPTCHA_API_KEY = "6Ld_F4klAAAAAPEXvTXu2XU2ACSLQO58icMWxyzg";
 
 const DEFAULT_FORM_DATA = {
   name: "",
