@@ -1,4 +1,4 @@
-import React, { useReducer, useState, useRef } from "react";
+import React, { useReducer, useState } from "react";
 import "./Contact.scss";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
@@ -18,11 +18,10 @@ const Contact = () => {
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 
   const [formData, setFormData] = useReducer((old, update) => ({ ...old, ...update }), DEFAULT_FORM_DATA);
-  const recaptchaRef = useRef();
-
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    recaptchaRef.current.execute();
+
+    console.log("recaptchaToken", recaptchaToken);
     await axios({
       method: "post",
       url: "https://three57-group-backend.onrender.com/send-mail",
@@ -129,7 +128,7 @@ const Contact = () => {
               </div>
 
               <div className="pl-36">
-                <ReCAPTCHA sitekey={RECAPTCHA_API_KEY} size="invisible" ref={recaptchaRef} onChange={(token) => setRecaptchaToken(token)} />
+                <ReCAPTCHA sitekey={RECAPTCHA_API_KEY} onChange={(token) => setRecaptchaToken(token)} />
                 <button className="w-3/5 py-1 text-2xl text-white rounded-md bg-primary">Submit</button>
               </div>
             </div>
