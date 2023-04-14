@@ -17,10 +17,6 @@ const DEFAULT_FORM_DATA = {
 const Contact = () => {
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 
-  grecaptcha.enterprise.ready(function () {
-    grecaptcha.enterprise.execute("6Ld-h4glAAAAAKSg3Rn_2nLuJtgfd_AofLxgRemf", { action: "login" }).then(function (token) {});
-  });
-
   const [formData, setFormData] = useReducer((old, update) => ({ ...old, ...update }), DEFAULT_FORM_DATA);
   const handleFormSubmit = async (event) => {
     event.preventDefault();
