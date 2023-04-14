@@ -128,7 +128,7 @@ const Contact = () => {
               </div>
 
               <div className="pl-36">
-                <ReCAPTCHA sitekey={RECAPTCHA_API_KEY} onChange={(token) => setRecaptchaToken(token)} />
+                <ReCAPTCHA className="mb-4" sitekey={RECAPTCHA_API_KEY} onChange={(token) => setRecaptchaToken(token)} />
                 <button className="w-3/5 py-1 text-2xl text-white rounded-md bg-primary">Submit</button>
               </div>
             </div>
