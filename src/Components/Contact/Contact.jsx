@@ -3,7 +3,7 @@ import "./Contact.scss";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 
-const RECAPTCHA_API_KEY = "6Lc1KXklAAAAAHIWQFV__UbNXvIFytcLfsEIK_W0";
+const RECAPTCHA_API_KEY = "6Ld-h4glAAAAAKSg3Rn_2nLuJtgfd_AofLxgRemf";
 
 const DEFAULT_FORM_DATA = {
   name: "",
@@ -18,15 +18,6 @@ const Contact = () => {
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 
   const [formData, setFormData] = useReducer((old, update) => ({ ...old, ...update }), DEFAULT_FORM_DATA);
-
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   company: "",
-  //   title: "",
-  //   subject: "",
-  //   message: "",
-  // });
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -48,7 +39,6 @@ const Contact = () => {
     const name = event.target.id;
     const value = event.target.value;
     setFormData({ [name]: value });
-    // setFormData({ ...formData, [name]: value });
   };
 
   return (
