@@ -28,14 +28,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative">
+    <section id="hero" className="relative z-10">
       <div className="container">
         <div className="md:w-1/2 hero-content">
           <h1 className="font-normal leading-[60px] mb-20">Over 20 years of experience in management consulting</h1>
-          <div className="flex flex-col gap-3 text-2xl w-max lg:text-3xl">
-            <input type="text" className="py-1 rounded-md placeholder:text-center" placeholder="email@company.com" />
-            <button className="py-1 text-white rounded-md bg-secondary">Join Our Network</button>
-          </div>
         </div>
 
         <div className="slider">

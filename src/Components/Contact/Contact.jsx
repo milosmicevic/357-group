@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative pb-10 overflow-hidden pt-28">
+    <section id="contact" className="relative pb-10 overflow-hidden text-white bg-black pt-28">
       <div className="container">
         <div className="pr-6 md:w-1/2">
           <form action="" onSubmit={handleFormSubmit}>
@@ -50,7 +50,7 @@ const Contact = () => {
             </p>
             <div className="flex flex-col gap-6">
               <div className="flex gap-4">
-                <label className="pt-1 w-40 text-right text-[#5a5151]" htmlFor="name">
+                <label className="w-40 pt-1 text-right text-white" htmlFor="name">
                   NAME
                 </label>
                 <input
@@ -63,7 +63,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex gap-4">
-                <label className="pt-1 w-40 text-right text-[#5a5151]" htmlFor="email">
+                <label className="w-40 pt-1 text-right text-white" htmlFor="email">
                   EMAIL
                 </label>
                 <input
@@ -76,7 +76,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex gap-4">
-                <label className="pt-1 w-40 text-right text-[#5a5151]" htmlFor="company">
+                <label className="w-40 pt-1 text-right text-white" htmlFor="company">
                   COMPANY
                 </label>
                 <input
@@ -89,7 +89,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex gap-4">
-                <label className="pt-1 w-40 text-right text-[#5a5151]" htmlFor="title">
+                <label className="w-40 pt-1 text-right text-white" htmlFor="title">
                   TITLE
                 </label>
                 <input
@@ -102,7 +102,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex gap-4">
-                <label className="pt-1 w-40 text-right text-[#5a5151]" htmlFor="subject">
+                <label className="w-40 pt-1 text-right text-white" htmlFor="subject">
                   SUBJECT
                 </label>
                 <input
@@ -115,7 +115,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex gap-4">
-                <label className="pt-1 w-40 text-right text-[#5a5151]" htmlFor="message">
+                <label className="w-40 pt-1 text-right text-white" htmlFor="message">
                   MESSAGE
                 </label>
                 <textarea
@@ -134,7 +134,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="absolute left-1/2 w-[100%] bg-white h-full top-0 md:block hidden -z-10"></div>
+        <div className="absolute left-1/2 w-[100%] h-full top-0 md:block hidden -z-10"></div>
       </div>
     </section>
   );
